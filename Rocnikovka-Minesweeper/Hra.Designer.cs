@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hra));
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            lb_skore = new Label();
+            lb_vlajecky = new Label();
+            nacteni = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -46,49 +48,53 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(608, 9);
+            label2.Location = new Point(130, 9);
             label2.Name = "label2";
             label2.Size = new Size(36, 15);
             label2.TabIndex = 1;
             label2.Text = "Skóre";
-            label2.TextAlign = ContentAlignment.TopRight;
             // 
-            // label3
+            // lb_skore
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(538, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 45);
-            label3.TabIndex = 2;
-            label3.Text = "Skóre";
-            label3.TextAlign = ContentAlignment.TopRight;
+            lb_skore.AutoSize = true;
+            lb_skore.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_skore.Location = new Point(128, 24);
+            lb_skore.Name = "lb_skore";
+            lb_skore.RightToLeft = RightToLeft.Yes;
+            lb_skore.Size = new Size(38, 45);
+            lb_skore.TabIndex = 2;
+            lb_skore.Text = "0";
             // 
-            // label4
+            // lb_vlajecky
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(12, 24);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 45);
-            label4.TabIndex = 3;
-            label4.Text = "40";
+            lb_vlajecky.AutoSize = true;
+            lb_vlajecky.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_vlajecky.Location = new Point(12, 24);
+            lb_vlajecky.Name = "lb_vlajecky";
+            lb_vlajecky.Size = new Size(56, 45);
+            lb_vlajecky.TabIndex = 3;
+            lb_vlajecky.Text = "40";
+            // 
+            // nacteni
+            // 
+            nacteni.Enabled = true;
+            nacteni.Interval = 50;
+            nacteni.Tick += nacteni_Tick;
             // 
             // Hra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(656, 799);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            ClientSize = new Size(462, 563);
+            Controls.Add(lb_vlajecky);
+            Controls.Add(lb_skore);
             Controls.Add(label2);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Hra";
             Text = "Minesweeper - Herní okno";
+            Load += Hra_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,7 +103,8 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lb_skore;
+        private Label lb_vlajecky;
+        private System.Windows.Forms.Timer nacteni;
     }
 }
