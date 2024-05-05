@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hra));
             label1 = new Label();
             label2 = new Label();
             lb_skore = new Label();
             lb_vlajecky = new Label();
-            nacteni = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -76,12 +74,6 @@
             lb_vlajecky.TabIndex = 3;
             lb_vlajecky.Text = "40";
             // 
-            // nacteni
-            // 
-            nacteni.Enabled = true;
-            nacteni.Interval = 50;
-            nacteni.Tick += nacteni_Tick;
-            // 
             // Hra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -105,6 +97,5 @@
         private Label label2;
         private Label lb_skore;
         private Label lb_vlajecky;
-        private System.Windows.Forms.Timer nacteni;
     }
 }
