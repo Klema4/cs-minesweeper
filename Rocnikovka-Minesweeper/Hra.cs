@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using Rocnikovka_Minesweeper.Properties;
 using System.Runtime.Versioning;
+using System.Windows.Forms;
 
 namespace Rocnikovka_Minesweeper
 {
@@ -10,6 +11,7 @@ namespace Rocnikovka_Minesweeper
         private static int pocet_boxu = 399;
         private static int radek = 0;
         private static int pocet_bodu = 0;
+        private static bool prvni_klik = true;
 
         public Hra()
         {
@@ -20,7 +22,6 @@ namespace Rocnikovka_Minesweeper
         public static StreamReader sr = new StreamReader("./settings.txt");
         public static int pocet_vlajecek = Convert.ToInt16(sr.ReadLine());
         public static int pocet_bomb = Convert.ToInt16(sr.ReadLine());
-        public static int sance = Convert.ToInt16(sr.ReadLine());
 
         // Začátek pro hrací pole
         int x = 20;
@@ -78,32 +79,38 @@ namespace Rocnikovka_Minesweeper
                 {
                     // Odebrání vlaječky
                     pb.BackgroundImage = Image.FromFile("../../../Resources/block.png");
-                    pb.Tag = "Field";
+                    string[] tags = pb.Tag.ToString().Split(";");
+                    pb.Tag = tags[1];
                     pocet_vlajecek++;
                     lb_vlajecky.Text = pocet_vlajecek.ToString();
                 }
                 else
                 {
-                    // Přidání vlaječky
-                    pb.BackgroundImage = Image.FromFile("../../../Resources/flag.png");
-                    pb.Tag = "FieldFlag";
-                    pocet_vlajecek--;
-                    lb_vlajecky.Text = pocet_vlajecek.ToString();
+                    // Přidání podmínky, aby nešla přidat vlaječka na již otevřené místo
+                    if (pb.Tag.ToString().Contains("Unlocked"))
+                    {
+                        return;
+                    } else
+                    {
+                        // Přidání vlaječky
+                        pb.BackgroundImage = Image.FromFile("../../../Resources/flag.png");
+                        pb.Tag = "FieldFlag;" + pb.Tag;
+                        pocet_vlajecek--;
+                        lb_vlajecky.Text = pocet_vlajecek.ToString();
+                    }
                 }
             }
             else
             {
+
                 // Získání PictureBoxu
                 PictureBox pb = (PictureBox)sender;
 
                 // Pokud je vlaječka, tak se nic nestane
-                if (pb.Tag.ToString().Contains("FieldFlag"))
+                if (pb.Tag.ToString().Contains("FieldFlag") || pb.Tag.ToString().Contains("Unlocked"))
                 {
                     return;
-                }
-
-                // Pokud je bomba
-                if (pb.Tag.ToString().Contains("Bomb"))
+                } else if (pb.Tag.ToString().Contains("Bomb"))
                 {
                     // Zobrazení všech bomb
                     foreach (Control prvek in Controls)
@@ -120,29 +127,52 @@ namespace Rocnikovka_Minesweeper
                 }
                 else
                 {
-                    // Zobrazení počtu bomb okolo
-                    pb.BackgroundImage = null;
+                    // Zobrazení kostičky
                     pb.BackgroundImageLayout = ImageLayout.Stretch;
                     switch (pb.Tag.ToString())
                     {
                         case "01":
                             pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 1;
+                            }
                             break;
                         case "12":
                             pb.BackgroundImage = Image.FromFile("../../../Resources/num_1.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 2;
+                            }
                             break;
                         case "23":
                             pb.BackgroundImage = Image.FromFile("../../../Resources/num_2.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 3;
+                            }
                             break;
                         case "34":
                             pb.BackgroundImage = Image.FromFile("../../../Resources/num_3.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 4;
+                            }
                             break;
                         default:
                             pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 1;
+                            }
                             break;
 
                     }
-                    //pb.Tag += "Unlocked";
                     lb_skore.Text = pocet_bodu.ToString();
                 }
             }
@@ -153,7 +183,7 @@ namespace Rocnikovka_Minesweeper
             // Vytvoření HashSetu pro uložení čísel polí s bombami
             HashSet<int> bomby_cisla = new HashSet<int>();
             int picture_box = 0;
-            for (int i = 0; i < Hra.pocet_bomb; i++)
+            for (int i = 0; i <= Hra.pocet_bomb; i++)
             {
                 // Přidání náhodného čísla do HashSetu
                 bomby_cisla.Add(Random.Shared.Next(0, 400));
@@ -169,10 +199,6 @@ namespace Rocnikovka_Minesweeper
                     {
                         //prvek.BackgroundImage = Image.FromFile("../../../Resources/bomb.png");
                         prvek.Tag += "Bomb";
-                    }
-                    else
-                    {
-                        // prvek.Tag += "1";
                     }
                     picture_box++;
                 }
@@ -216,14 +242,8 @@ namespace Rocnikovka_Minesweeper
                     // Přidání počtu bomb okolo do Tagu
                     prvek.Tag = pocet_bomb_okolo.ToString();
                     prvek.BackgroundImageLayout = ImageLayout.Stretch;
-                    /*switch (pocet_bomb_okolo)
-                    {
-                        case 0: break;
-                        case 1: prvek.BackgroundImage = Image.FromFile("../../../Resources/num_1.png"); break;
-                        case 2: prvek.BackgroundImage = Image.FromFile("../../../Resources/num_2.png"); break;
-                        case 3: prvek.BackgroundImage = Image.FromFile("../../../Resources/num_3.png"); break;
-                    }*/
 
+                     
                     switch (pocet_bomb_okolo)
                     {
                         case 0: prvek.Tag += "1"; break;

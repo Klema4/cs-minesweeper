@@ -10,10 +10,21 @@
         {
             this.Close();
             StreamWriter sw = new StreamWriter("./settings.txt", false);
-            sw.WriteLine(num_vlajecky.Value.ToString());
-            sw.WriteLine(num_max_miny.Value.ToString());
-            sw.WriteLine(num_sance_mina.Value.ToString());
+            sw.WriteLine(num_vlajecky.Value);
+            sw.WriteLine(num_max_miny.Value);
             sw.Close();
+        }
+
+        private void Nastaveni_Load(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader("./settings.txt");
+            while (!sr.EndOfStream)
+            {
+                num_vlajecky.Value = Convert.ToInt32(sr.ReadLine());
+                num_max_miny.Value = Convert.ToInt32(sr.ReadLine());
+            }
+
+            sr.Close();
         }
     }
 }
