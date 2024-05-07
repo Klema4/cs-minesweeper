@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Rocnikovka_Minesweeper
+﻿namespace Rocnikovka_Minesweeper
 {
     public partial class JakHrat : Form
     {

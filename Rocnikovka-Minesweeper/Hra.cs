@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using Rocnikovka_Minesweeper.Properties;
-using System.Runtime.Versioning;
-using System.Windows.Forms;
-
-namespace Rocnikovka_Minesweeper
+﻿namespace Rocnikovka_Minesweeper
 {
     public partial class Hra : Form
     {
@@ -90,7 +85,8 @@ namespace Rocnikovka_Minesweeper
                     if (pb.Tag.ToString().Contains("Unlocked"))
                     {
                         return;
-                    } else
+                    }
+                    else
                     {
                         // Přidání vlaječky
                         pb.BackgroundImage = Image.FromFile("../../../Resources/flag.png");
@@ -102,7 +98,6 @@ namespace Rocnikovka_Minesweeper
             }
             else
             {
-
                 // Získání PictureBoxu
                 PictureBox pb = (PictureBox)sender;
 
@@ -110,7 +105,36 @@ namespace Rocnikovka_Minesweeper
                 if (pb.Tag.ToString().Contains("FieldFlag") || pb.Tag.ToString().Contains("Unlocked"))
                 {
                     return;
-                } else if (pb.Tag.ToString().Contains("Bomb"))
+                }
+
+                if (prvni_klik)
+                {
+                    pb.Tag += "Start;";
+                    int picture_box = 0;
+                    // Udělat kolem PictureBoxu 5x5 otevřených polí
+                    foreach (Control prvek in Controls)
+                    {
+                        if (prvek.Tag != null && prvek.Tag.ToString().Contains("Start"))
+                        {
+                            // Vygeneruj 5x5 pole, které se otevře
+                            for (int i = picture_box - 2; i <= picture_box + 2; i++)
+                            {
+                                if (Controls[i] != null && Controls[i].Tag.ToString().Contains("Field"))
+                                {
+                                    Controls[i].BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                                    Controls[i].Tag += "Unlocked";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            picture_box++;
+                        }
+                    }
+                    prvni_klik = false;
+                }
+
+                if (pb.Tag.ToString().Contains("Bomb"))
                 {
                     // Zobrazení všech bomb
                     foreach (Control prvek in Controls)
@@ -197,7 +221,6 @@ namespace Rocnikovka_Minesweeper
                     // Přidání obrázku bomb do hracího pole
                     if (bomby_cisla.Contains(picture_box))
                     {
-                        //prvek.BackgroundImage = Image.FromFile("../../../Resources/bomb.png");
                         prvek.Tag += "Bomb";
                     }
                     picture_box++;
@@ -223,7 +246,7 @@ namespace Rocnikovka_Minesweeper
                         }
                     }
 
-                    for (int i = (picture_box - 21) - 1; i <= (picture_box - 21) + 1; i++)
+                    for (int i = picture_box - 22; i <= picture_box - 20; i++)
                     {
                         if (bomby_cisla.Contains(i))
                         {
@@ -231,7 +254,7 @@ namespace Rocnikovka_Minesweeper
                         }
                     }
 
-                    for (int i = (picture_box + 21) - 1; i <= (picture_box + 21) + 1; i++)
+                    for (int i = picture_box + 20; i <= picture_box + 22; i++)
                     {
                         if (bomby_cisla.Contains(i))
                         {
@@ -243,7 +266,6 @@ namespace Rocnikovka_Minesweeper
                     prvek.Tag = pocet_bomb_okolo.ToString();
                     prvek.BackgroundImageLayout = ImageLayout.Stretch;
 
-                     
                     switch (pocet_bomb_okolo)
                     {
                         case 0: prvek.Tag += "1"; break;

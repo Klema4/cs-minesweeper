@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\rocnikovka-minesweeper\\hra.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\hra.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\rocnikovka-minesweeper\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Hra.cs",
               "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\Hra.cs",
               "RelativeToolTip": "Hra.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAIcAAAAiAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAIwIgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-05T16:38:38.851Z",
               "EditorCaption": ""
@@ -58,8 +58,7 @@
               "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\Hra.resx",
               "RelativeToolTip": "Hra.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-05-06T18:20:28.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T18:20:28.244Z"
             },
             {
               "$type": "Document",
@@ -70,8 +69,7 @@
               "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-05-06T18:24:17.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T18:24:17.003Z"
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Rocnikovka-Minesweeper\\Hra.cs [N\u00E1vrh]",
               "RelativeToolTip": "Hra.cs [N\u00E1vrh]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:14:00.742Z",
-              "EditorCaption": " [N\u00E1vrh]"
+              "WhenOpened": "2024-04-15T19:14:00.742Z"
             }
           ]
         }
