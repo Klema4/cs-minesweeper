@@ -33,3 +33,5 @@ Ve Visual Studio dejte **"Otevřít projekt nebo řešení"** a najděte SLN sou
 ✅ Projekt je licencován pod MIT, takže jakékoliv kopírování, modifikace, distribuce nebo komerční využití je volné
 ⚠️ Na projektu neplánuji dále pracovat po jeho plném odevzdání 4.6.2024 (pokud se jinak nerozhodnu), ovšem stále přijímám jakékoliv pull requesty nebo issues.
 ⚠️ Zdrojový kód programu nemusí odpovídat standardům programování v C#, může obsahovat chyby, různé nedostatky nebo nedostatečné optimalizace. Vítám jakékoliv námitky ke kódu, vč. jeho úpravy.
+
+![Let's Code banner](https://lets-code.cz/assets/content/LC_Banner_GitHub.png)
