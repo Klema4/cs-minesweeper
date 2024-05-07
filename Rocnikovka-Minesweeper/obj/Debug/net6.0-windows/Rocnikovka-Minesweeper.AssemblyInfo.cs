@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rocnikovka-Minesweeper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b4e52618821b5dd2af037dfd0dd905c4a65346a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5addb94f79553b5f8664a359c5a8d4ad593084f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rocnikovka-Minesweeper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rocnikovka-Minesweeper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

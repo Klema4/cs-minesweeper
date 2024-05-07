@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JakHrat));
             label1 = new Label();
             btn_zpet = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -51,13 +52,23 @@
             btn_zpet.TabIndex = 1;
             btn_zpet.Text = "Zpět do menu";
             btn_zpet.UseVisualStyleBackColor = true;
-            btn_zpet.Click += this.btn_zpet_Click;
+            btn_zpet.Click += btn_zpet_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(22, 74);
+            label2.Name = "label2";
+            label2.Size = new Size(218, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Zcela jednoduše! awdawdawdawwdawd";
             // 
             // JakHrat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(549, 450);
+            Controls.Add(label2);
             Controls.Add(btn_zpet);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -71,5 +82,6 @@
 
         private Label label1;
         private Button btn_zpet;
+        private Label label2;
     }
 }
