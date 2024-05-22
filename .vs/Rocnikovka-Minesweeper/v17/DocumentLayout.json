@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hra.cs",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
+              "RelativeDocumentMoniker": "Hra.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
+              "RelativeToolTip": "Hra.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAAHwAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T18:38:20.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Hra.cs [N\u00E1vrh]",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
+              "RelativeDocumentMoniker": "Hra.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs [N\u00E1vrh]",
+              "RelativeToolTip": "Hra.cs [N\u00E1vrh]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T18:36:23.487Z",
+              "EditorCaption": " [N\u00E1vrh]"
             }
           ]
         }

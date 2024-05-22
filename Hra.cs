@@ -1,4 +1,6 @@
-﻿namespace Rocnikovka_Minesweeper
+﻿using System.Text.Json.Serialization;
+
+namespace Rocnikovka_Minesweeper
 {
     public partial class Hra : Form
     {
@@ -109,95 +111,103 @@
 
                 if (prvni_klik)
                 {
-                    pb.Tag += "Start;";
+                    pb.Tag += "Start";
                     int picture_box = 0;
                     // Udělat kolem PictureBoxu 5x5 otevřených polí
                     foreach (Control prvek in Controls)
                     {
-                        if (prvek.Tag != null && prvek.Tag.ToString().Contains("Start"))
+                        if (prvek is PictureBox && prvek.Tag.ToString().Contains("Start"))
                         {
-                            // Vygeneruj 5x5 pole, které se otevře
+                            // 5x5 pole, které se otevře
                             for (int i = picture_box - 2; i <= picture_box + 2; i++)
                             {
-                                if (Controls[i] != null && Controls[i].Tag.ToString().Contains("Field"))
-                                {
-                                    Controls[i].BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
-                                    Controls[i].Tag += "Unlocked";
-                                }
+                                label2.Text = i.ToString();
+                                first_move(prvek, i);
+                            }
+
+                            for (int i = picture_box - 23; i <= picture_box - 19; i++)
+                            {
+                                label2.Text = i.ToString();
+                                first_move(prvek, i);
+                            }
+
+                            for (int i = picture_box + 19; i <= picture_box + 23; i++)
+                            {
+                                label2.Text = i.ToString() + " |" + prvek.Tag.ToString();
+                                first_move(prvek, i);
                             }
                         }
-                        else
-                        {
-                            picture_box++;
-                        }
+                        picture_box++;
                     }
                     prvni_klik = false;
                 }
-
-                if (pb.Tag.ToString().Contains("Bomb"))
-                {
-                    // Zobrazení všech bomb
-                    foreach (Control prvek in Controls)
-                    {
-                        if (prvek.Tag != null && prvek.Tag.ToString().Contains("Bomb"))
-                        {
-                            prvek.BackgroundImage = Image.FromFile("../../../Resources/bomb.png");
-                        }
-                    }
-
-                    // Zobrazení MessageBoxu
-                    MessageBox.Show($"Šlápl jsi na minu...\nTvé skóre je: {pocet_bodu}", "Konec hry", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Restart();
-                }
                 else
                 {
-                    // Zobrazení kostičky
-                    pb.BackgroundImageLayout = ImageLayout.Stretch;
-                    switch (pb.Tag.ToString())
+                    if (pb.Tag.ToString().Contains("Bomb"))
                     {
-                        case "01":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                        // Zobrazení všech bomb
+                        foreach (Control prvek in Controls)
+                        {
+                            if (prvek.Tag != null && prvek.Tag.ToString().Contains("Bomb"))
                             {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 1;
+                                prvek.BackgroundImage = Image.FromFile("../../../Resources/bomb.png");
                             }
-                            break;
-                        case "12":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_1.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 2;
-                            }
-                            break;
-                        case "23":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_2.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 3;
-                            }
-                            break;
-                        case "34":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_3.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 4;
-                            }
-                            break;
-                        default:
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 1;
-                            }
-                            break;
+                        }
 
+                        // Zobrazení MessageBoxu
+                        MessageBox.Show($"Šlápl jsi na minu...\nTvé skóre je: {pocet_bodu}", "Konec hry", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Application.Restart();
                     }
-                    lb_skore.Text = pocet_bodu.ToString();
+                    else
+                    {
+                        // Zobrazení kostičky
+                        pb.BackgroundImageLayout = ImageLayout.Stretch;
+                        switch (pb.Tag.ToString())
+                        {
+                            case "01":
+                                pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                                if (!pb.Tag.ToString().Contains("Unlocked"))
+                                {
+                                    pb.Tag += "Unlocked";
+                                    pocet_bodu += 1;
+                                }
+                                break;
+                            case "12":
+                                pb.BackgroundImage = Image.FromFile("../../../Resources/num_1.png");
+                                if (!pb.Tag.ToString().Contains("Unlocked"))
+                                {
+                                    pb.Tag += "Unlocked";
+                                    pocet_bodu += 2;
+                                }
+                                break;
+                            case "23":
+                                pb.BackgroundImage = Image.FromFile("../../../Resources/num_2.png");
+                                if (!pb.Tag.ToString().Contains("Unlocked"))
+                                {
+                                    pb.Tag += "Unlocked";
+                                    pocet_bodu += 3;
+                                }
+                                break;
+                            case "34":
+                                pb.BackgroundImage = Image.FromFile("../../../Resources/num_3.png");
+                                if (!pb.Tag.ToString().Contains("Unlocked"))
+                                {
+                                    pb.Tag += "Unlocked";
+                                    pocet_bodu += 4;
+                                }
+                                break;
+                            default:
+                                pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                                if (!pb.Tag.ToString().Contains("Unlocked"))
+                                {
+                                    pb.Tag += "Unlocked";
+                                    pocet_bodu += 1;
+                                }
+                                break;
+
+                        }
+                        lb_skore.Text = pocet_bodu.ToString();
+                    }
                 }
             }
         }
@@ -221,7 +231,7 @@
                     // Přidání obrázku bomb do hracího pole
                     if (bomby_cisla.Contains(picture_box))
                     {
-                        prvek.Tag += "Bomb";
+                        prvek.Tag += "Bomb;";
                     }
                     picture_box++;
                 }
@@ -275,6 +285,68 @@
                     }
                 }
                 picture_box++;
+            }
+        }
+
+        public void first_move(Control pb, int i)
+        {
+            int pomocna = 0;
+            foreach (Control prvek in Controls)
+            {
+                if (pomocna == i)
+                {
+                    // Zobrazení kostičky
+                    // label2.Text = pb.Tag.ToString();
+                    pb.BackgroundImageLayout = ImageLayout.Stretch;
+                    switch (pb.Tag.ToString())
+                    {
+                        case "01":
+                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 1;
+                            }
+                            break;
+                        case "12":
+                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_1.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 2;
+                            }
+                            break;
+                        case "23":
+                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_2.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 3;
+                            }
+                            break;
+                        case "34":
+                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_3.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 4;
+                            }
+                            break;
+                        default:
+                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
+                            if (!pb.Tag.ToString().Contains("Unlocked"))
+                            {
+                                pb.Tag += "Unlocked";
+                                pocet_bodu += 1;
+                            }
+                            break;
+
+                    }
+                    lb_skore.Text = pocet_bodu.ToString();
+                } else
+                {
+                    pomocna++;
+                }
             }
         }
     }
