@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Zcela jednoduše!
+
+Tvůj cíl je vyklikat celé pole čtverečků bez toho, aniž bys myší kliknul/a na minu.
+Jakmile na minu klikneš, tvá hra skončila.
+
+Pokud chceš, můžeš také používat vlaječky, kterými si můžeš označit potenciální místa,
+kde by se mohla mina nacházet.
+
+V nastavení je také možnost si hru trochu "osladit" tím, že si můžeš některé nastavení
+přepsat dle tvého gusta. V nastavení si můžeš zvolit počet min, které se mohou v poli
+objevit nebo počet vlaječek, které můžeš použít pro označení polí.
+
+Přeji hodně štěstí!
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

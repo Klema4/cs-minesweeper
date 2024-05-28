@@ -60,3 +60,23 @@ C:\Users\klema\Documents\C# do školy\cs-minesweeper\obj\Debug\net6.0-windows\re
 C:\Users\klema\Documents\C# do školy\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.pdb
 C:\Users\klema\Documents\C# do školy\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.genruntimeconfig.cache
 C:\Users\klema\Documents\C# do školy\cs-minesweeper\obj\Debug\net6.0-windows\ref\Rocnikovka-Minesweeper.dll
+C:\Users\klema\Downloads\cs-minesweeper\bin\Debug\net6.0-windows\Rocnikovka-Minesweeper.exe
+C:\Users\klema\Downloads\cs-minesweeper\bin\Debug\net6.0-windows\Rocnikovka-Minesweeper.deps.json
+C:\Users\klema\Downloads\cs-minesweeper\bin\Debug\net6.0-windows\Rocnikovka-Minesweeper.runtimeconfig.json
+C:\Users\klema\Downloads\cs-minesweeper\bin\Debug\net6.0-windows\Rocnikovka-Minesweeper.dll
+C:\Users\klema\Downloads\cs-minesweeper\bin\Debug\net6.0-windows\Rocnikovka-Minesweeper.pdb
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka_Minesweeper.Hra.resources
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka_Minesweeper.JakHrat.resources
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka_Minesweeper.Menu.resources
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka_Minesweeper.Nastaveni.resources
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka_Minesweeper.Properties.Resources.resources
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.csproj.GenerateResource.cache
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.AssemblyInfoInputs.cache
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.AssemblyInfo.cs
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.dll
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\refint\Rocnikovka-Minesweeper.dll
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.pdb
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\Rocnikovka-Minesweeper.genruntimeconfig.cache
+C:\Users\klema\Downloads\cs-minesweeper\obj\Debug\net6.0-windows\ref\Rocnikovka-Minesweeper.dll

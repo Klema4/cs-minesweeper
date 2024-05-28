@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klema\\Documents\\C# do školy\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {}
+    "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klema\\Documents\\C# do školy\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {
+    "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klema\\Documents\\C# do školy\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
+        "projectUniqueName": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
         "projectName": "Rocnikovka-Minesweeper",
-        "projectPath": "C:\\Users\\klema\\Documents\\C# do školy\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
+        "projectPath": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
         "packagesPath": "C:\\Users\\klema\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klema\\Documents\\C# do školy\\cs-minesweeper\\obj\\",
+        "outputPath": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

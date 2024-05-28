@@ -59,9 +59,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(22, 74);
             label2.Name = "label2";
-            label2.Size = new Size(218, 15);
+            label2.Size = new Size(464, 195);
             label2.TabIndex = 2;
-            label2.Text = "Zcela jednoduše! awdawdawdawwdawd";
+            label2.Text = resources.GetString("label2.Text");
             // 
             // JakHrat
             // 
