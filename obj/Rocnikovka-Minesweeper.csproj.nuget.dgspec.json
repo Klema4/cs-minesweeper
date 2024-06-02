@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {}
+    "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {
+    "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
+        "projectUniqueName": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
         "projectName": "Rocnikovka-Minesweeper",
-        "projectPath": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
+        "projectPath": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Rocnikovka-Minesweeper.csproj",
         "packagesPath": "C:\\Users\\klema\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klema\\Downloads\\cs-minesweeper\\obj\\",
+        "outputPath": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\klema\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -54,6 +55,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -62,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

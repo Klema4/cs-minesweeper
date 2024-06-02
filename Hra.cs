@@ -8,14 +8,13 @@ namespace Rocnikovka_Minesweeper
         private static int pocet_boxu = 399;
         private static int radek = 0;
         private static int pocet_bodu = 0;
-        private static bool prvni_klik = true;
 
         public Hra()
         {
             InitializeComponent();
         }
 
-        // Základní nastavení z čtení souboru (NEUPRAVOVAT)
+        // Základní nastavení z čtení souboru
         public static StreamReader sr = new StreamReader("./settings.txt");
         public static int pocet_vlajecek = Convert.ToInt16(sr.ReadLine());
         public static int pocet_bomb = Convert.ToInt16(sr.ReadLine());
@@ -59,7 +58,7 @@ namespace Rocnikovka_Minesweeper
                 }
             }
 
-            // Zavolání funkce pro generování bomb
+            // Zavolání funkce pro generování min
             algorithm_bomb();
         }
 
@@ -108,40 +107,6 @@ namespace Rocnikovka_Minesweeper
                 {
                     return;
                 }
-
-                /*if (prvni_klik)
-                {
-                    pb.Tag += "Start";
-                    int picture_box = 0;
-                    // Udělat kolem PictureBoxu 5x5 otevřených polí
-                    foreach (Control prvek in Controls)
-                    {
-                        if (prvek is PictureBox && prvek.Tag.ToString().Contains("Start"))
-                        {
-                            // 5x5 pole, které se otevře
-                            for (int i = picture_box - 2; i <= picture_box + 2; i++)
-                            {
-                                label2.Text = i.ToString();
-                                first_move(prvek, i);
-
-                            }
-
-                            for (int i = picture_box - 23; i <= picture_box - 19; i++)
-                            {
-                                label2.Text = i.ToString();
-                                first_move(prvek, i);
-                            }
-
-                            for (int i = picture_box + 19; i <= picture_box + 23; i++)
-                            {
-                                label2.Text = i.ToString() + " |" + prvek.Tag.ToString();
-                                first_move(prvek, i);
-                            }
-                        }
-                        picture_box++;
-                    }
-                    prvni_klik = false;
-                }*/
 
                 if (pb.Tag.ToString().Contains("Bomb"))
                 {
@@ -213,7 +178,7 @@ namespace Rocnikovka_Minesweeper
 
         public void algorithm_bomb()
         {
-            // Vytvoření HashSetu pro uložení čísel polí s bombami
+            // Vytvoření HashSetu pro uložení čísel políček, ve kterých se nachází mina
             HashSet<int> bomby_cisla = new HashSet<int>();
             int picture_box = 0;
             for (int i = 0; i <= Hra.pocet_bomb; i++)
@@ -222,12 +187,12 @@ namespace Rocnikovka_Minesweeper
                 bomby_cisla.Add(Random.Shared.Next(0, 400));
             }
 
-            // Přidání obrázku bomb do hracího pole
+            // Projetí každého prvku a kontrola, jestli má tag Field
             foreach (Control prvek in Controls)
             {
                 if (prvek.Tag == "Field")
                 {
-                    // Přidání obrázku bomb do hracího pole
+                    // Pokud PictureBox má stejné číslo jako je uloženo v bomby_cisla, přidá se mu tag "Bomb" se středníkem pro oddělení tagů
                     if (bomby_cisla.Contains(picture_box))
                     {
                         prvek.Tag += "Bomb;";
@@ -271,7 +236,7 @@ namespace Rocnikovka_Minesweeper
                         }
                     }
 
-                    // Přidání počtu bomb okolo do Tagu
+                    // Přidání počtu min okolo do Tagu
                     prvek.Tag = pocet_bomb_okolo.ToString();
                     prvek.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -284,68 +249,6 @@ namespace Rocnikovka_Minesweeper
                     }
                 }
                 picture_box++;
-            }
-        }
-
-        public void first_move(Control pb, int i)
-        {
-            int pomocna = 0;
-            foreach (Control prvek in Controls)
-            {
-                if (pomocna == i)
-                {
-                    // Zobrazení kostičky
-                    // label2.Text = pb.Tag.ToString();
-                    pb.BackgroundImageLayout = ImageLayout.Stretch;
-                    switch (pb.Tag.ToString())
-                    {
-                        case "01":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 1;
-                            }
-                            break;
-                        case "12":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_1.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 2;
-                            }
-                            break;
-                        case "23":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_2.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 3;
-                            }
-                            break;
-                        case "34":
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/num_3.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 4;
-                            }
-                            break;
-                        default:
-                            pb.BackgroundImage = Image.FromFile("../../../Resources/block_unlocked.png");
-                            if (!pb.Tag.ToString().Contains("Unlocked"))
-                            {
-                                pb.Tag += "Unlocked";
-                                pocet_bodu += 1;
-                            }
-                            break;
-
-                    }
-                    lb_skore.Text = pocet_bodu.ToString();
-                } else
-                {
-                    pomocna++;
-                }
             }
         }
     }

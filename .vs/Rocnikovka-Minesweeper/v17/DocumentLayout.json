@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\",
+  "WorkspaceRootPath": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\github\\cs-minesweeper\\hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\c# do \u0161koly\\cs-minesweeper\\hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:hra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\nastaveni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:nastaveni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|c:\\users\\klema\\documents\\github\\cs-minesweeper\\nastaveni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:nastaveni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9B2C23-76FB-4D64-B233-E938BFF39B38}|Rocnikovka-Minesweeper.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,14 +37,31 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Nastaveni.cs",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Nastaveni.cs",
+              "RelativeDocumentMoniker": "Nastaveni.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Nastaveni.cs",
+              "RelativeToolTip": "Nastaveni.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T18:15:50.072Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Hra.cs",
-              "DocumentMoniker": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Hra.cs",
               "RelativeDocumentMoniker": "Hra.cs",
-              "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Hra.cs",
               "RelativeToolTip": "Hra.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAAAHwAAAA1AAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAowK0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T18:38:20.086Z",
               "EditorCaption": ""
@@ -44,14 +69,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Hra.cs [N\u00E1vrh]",
-              "DocumentMoniker": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs",
-              "RelativeDocumentMoniker": "Hra.cs",
-              "ToolTip": "C:\\Users\\klema\\Documents\\C# do \u0161koly\\cs-minesweeper\\Hra.cs [N\u00E1vrh]",
-              "RelativeToolTip": "Hra.cs [N\u00E1vrh]",
+              "Title": "Nastaveni.cs [N\u00E1vrh]",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Nastaveni.cs",
+              "RelativeDocumentMoniker": "Nastaveni.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Nastaveni.cs [N\u00E1vrh]",
+              "RelativeToolTip": "Nastaveni.cs [N\u00E1vrh]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T18:36:23.487Z",
+              "WhenOpened": "2024-06-01T18:15:46.063Z",
               "EditorCaption": " [N\u00E1vrh]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu.cs [N\u00E1vrh]",
+              "DocumentMoniker": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\klema\\Documents\\GitHub\\cs-minesweeper\\Menu.cs [N\u00E1vrh]",
+              "RelativeToolTip": "Menu.cs [N\u00E1vrh]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T15:08:23.517Z"
             }
           ]
         }
